@@ -1,8 +1,9 @@
 class ProtocolHandler{
-    
-    getInstance(connectionProtocol){
+    private static instance: ProtocolHandler;
+    private connections : string [] = [] ;
+
+    public getInstance(connectionProtocol){
         if (!ProtocolHandler.instance){
-            this.connections = [];
             console.log('new instance');
             ProtocolHandler.instance = this;
         }
@@ -17,18 +18,18 @@ class ProtocolHandler{
         return ProtocolHandler.instance;
     }
      
-    send(message){
+    public send(message){
         console.log("----------");
         console.log(message);
     }
 
-    getCurrentConnections(){
+    public getCurrentConnections(){
         console.log("----------");
         console.log("The Connections is :");
         console.log(this.connections);
     }
 
-    release(connectionProtocol){
+    public release(connectionProtocol){
         for(let i=0; i< this.connections.length; i++){
             if(this.connections[i] == connectionProtocol){
                 console.log(this.connections[i] + " is released");
