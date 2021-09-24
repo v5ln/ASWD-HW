@@ -1,0 +1,25 @@
+{
+  "name": "ASWD-HW",
+  "version": "1.0.0",
+  "description": "i well finish tomorrow, and i well upload my explanation here and the graph too  thank u",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v5ln/ASWD-HW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v5ln/ASWD-HW/issues"
+  },
+  "homepage": "https://github.com/v5ln/ASWD-HW#readme",
+  "devDependencies": {
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
