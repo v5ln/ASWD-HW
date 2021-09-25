@@ -1,33 +1,33 @@
-import handler from "./protocolClass"
+import {ProtocolHandler} from "./protocolClass"
 
 export function ssh(){
-    const ssh = handler.getInstance('ssh')
-    ssh.send('ssh is connected');
-    ssh.getCurrentConnections();
+    const ssh = ProtocolHandler.getInstance('ssh')
+    ProtocolHandler.send('ssh is connected');
+    ProtocolHandler.getCurrentConnections();
 }
 
 export function telnet(){
-    const telnet = handler.getInstance('telnet')
-    telnet.send('telnet is connected');
-    telnet.getCurrentConnections();
+    const telnet = ProtocolHandler.getInstance('telnet')
+    ProtocolHandler.send('telnet is connected');
+    ProtocolHandler.getCurrentConnections();
 }
 
 export function http(){
-    const http = handler.getInstance('http')
-    http.send('http is connected');
-    http.getCurrentConnections();
+    const http = ProtocolHandler.getInstance('http')
+    ProtocolHandler.send('http is connected');
+    ProtocolHandler.getCurrentConnections();
 }
 
 export function scp(){
-    const scp = handler.getInstance('scp')
-    scp.send('scp is connected');
-    scp.getCurrentConnections();
-    scp.release('scp');
-    scp.getCurrentConnections();
+    const scp = ProtocolHandler.getInstance('scp')
+    ProtocolHandler.send('scp is connected');
+    ProtocolHandler.getCurrentConnections();
+    ProtocolHandler.release('scp');
+    ProtocolHandler.getCurrentConnections();
 }
 
 export function ftp(){
-    const ftp = handler.getInstance('ftp')
-    ftp.send('ftp is connected');
-    ftp.getCurrentConnections();
+    const ftp = ProtocolHandler.getInstance('ftp')
+    ProtocolHandler.send('ftp is connected');
+    ProtocolHandler.getCurrentConnections();
 }
