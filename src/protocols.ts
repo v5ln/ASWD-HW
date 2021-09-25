@@ -2,32 +2,32 @@ import {ProtocolHandler} from "./protocolClass"
 
 export function ssh(){
     const ssh = ProtocolHandler.getInstance('ssh')
-    ProtocolHandler.send('ssh is connected');
-    ProtocolHandler.getCurrentConnections();
+    ssh.send('ssh is connected');
+    ssh.getCurrentConnections();
 }
 
 export function telnet(){
     const telnet = ProtocolHandler.getInstance('telnet')
-    ProtocolHandler.send('telnet is connected');
-    ProtocolHandler.getCurrentConnections();
+    telnet.send('telnet is connected');
+    telnet.getCurrentConnections();
 }
 
 export function http(){
     const http = ProtocolHandler.getInstance('http')
-    ProtocolHandler.send('http is connected');
-    ProtocolHandler.getCurrentConnections();
+    http.send('http is connected');
+    http.getCurrentConnections();
 }
 
 export function scp(){
     const scp = ProtocolHandler.getInstance('scp')
-    ProtocolHandler.send('scp is connected');
-    ProtocolHandler.getCurrentConnections();
-    ProtocolHandler.release('scp');
-    ProtocolHandler.getCurrentConnections();
+    scp.send('scp is connected');
+    scp.getCurrentConnections();
+    scp.release('scp');
+    scp.getCurrentConnections();
 }
 
 export function ftp(){
     const ftp = ProtocolHandler.getInstance('ftp')
-    ProtocolHandler.send('ftp is connected');
-    ProtocolHandler.getCurrentConnections();
+    ftp.send('ftp is connected');
+    ftp.getCurrentConnections();
 }

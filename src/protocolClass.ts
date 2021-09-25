@@ -15,31 +15,31 @@ export class ProtocolHandler{
             console.log(this.connections[0] + " is disconnected");
             this.connections.shift();
         }
-
-        this.release(connectionProtocol);
         this.connections.push(connectionProtocol)
         return ProtocolHandler.instance;
     }
      
-    public static send(message: string){
+    public send(message: string){
         console.log("----------");
         console.log(message);
     }
 
-    public static getCurrentConnections(){
+    public  getCurrentConnections(){
         console.log("----------");
         console.log("The Connections is :");
-        console.log(this.connections);
+        console.log(ProtocolHandler.connections);
     }
 
-    public static release(connectionProtocol: string){
-        for(let i=0; i< this.connections.length; i++){
-            if(this.connections[i] == connectionProtocol){
-                console.log(this.connections[i] + " is released");
-                this.connections.splice(i, 1);
+    public release(connectionProtocol: string){
+        for(let i=0; i< ProtocolHandler.connections.length; i++){
+            if(ProtocolHandler.connections[i] == connectionProtocol){
+                console.log(ProtocolHandler.connections[i] + " is released");
+                ProtocolHandler.connections.splice(i, 1);
             }
         }
     }
 }
+
+
 
 
