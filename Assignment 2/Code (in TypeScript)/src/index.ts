@@ -29,3 +29,6 @@ const scp2 = scp.getInstance('scp2');
 scp2.send('scp2');
 
 scp1.getCurrentConnections();
+
+
+const ftp1 = ftp.getInstance("ftp");
